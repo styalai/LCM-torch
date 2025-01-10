@@ -17,16 +17,17 @@ class Transformer(nn.Module):
             nn.Linear(embd_dim, dim)
         )
 
-        decoder_layer = nn.TransformerDecoderLayer(d_model=dim, nhead=heads)
-        self.decoder = nn.TransformerDecoder(decoder_layer, num_layers=layers)
-        self.memory = torch.zeros((1, dim)).to(device)
+        self.decoder = nn.ModuleList([nn.TransformerDecoderLayer(d_model=dim, nhead=heads) for i in range(layers)])
         
         self.postnet = nn.Sequential(
             nn.Linear(dim, embd_dim),
             nn.LayerNorm(embd_dim)
         )
     def forward(self, x):
-        return self.postnet(self.decoder(self.prenet(x), self.memory))
+        x = self.prenet(x)
+        for l in self.decoder:
+            x = l(x, x)
+        return self.postnet(x)
 
 
 class LCMModel(nn.Module):
