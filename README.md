@@ -4,7 +4,7 @@ A simple and easy to use implementation of a Large Concept Model with pytorch.
 # Install
 ```
 pip install git+https://github.com/styalai/LCM-torch
-pip install wtpsplit
+pip install -q wtpsplit
 ```
 You also need to install faiseq2 but there are two command:
 - With GPU
@@ -17,6 +17,13 @@ pip install fairseq2==v0.3.0rc1 --pre --extra-index-url  https://fair.pkg.atmeta
 ```
 And install SONAR.
 ```
+pip install sonar-space
+```
+All (for GPU):
+```
+pip install git+https://github.com/styalai/LCM-torch
+pip install -q wtpsplit
+pip install -q fairseq2==v0.3.0rc1 --pre --extra-index-url  https://fair.pkg.atmeta.com/fairseq2/whl/rc/pt2.5.1/cu124 --upgrade
 pip install sonar-space
 ```
 # Use
