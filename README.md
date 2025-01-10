@@ -29,6 +29,8 @@ pip install sonar-space
 # Use
 
 ```python
+from LCM.LCM import LCMModel
+
 class LCMConfig:
     def __init__(self):
         self.device = "cuda"
@@ -55,7 +57,7 @@ o = lcm.generate("hello", num_generated_concepts=2)
 ```
 # Messages
 If you like this repo you can <b>put a star</b>.
-And if you want to understand the implementation I created an article:\n
+And if you want to understand the implementation I created an article:</b>
 -> link
 
 # Citation
