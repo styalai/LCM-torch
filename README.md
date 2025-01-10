@@ -28,7 +28,7 @@ pip install sonar-space
 ```
 # Use
 
-```
+```python
 class LCMConfig:
     def __init__(self):
         self.device = "cuda"
