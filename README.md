@@ -57,8 +57,8 @@ o = lcm.generate("hello", num_generated_concepts=2)
 ```
 # Messages
 If you like this repo you can <b>put a star</b>.
-And if you want to understand the implementation I created an article:</b>
--> link
+And if you want to understand the implementation I created an article:
+- link
 
 # Citation
 If you use LCM-torch in your research or projects, please cite the original Large Concept Model paper:
