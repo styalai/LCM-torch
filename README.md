@@ -54,8 +54,8 @@ lcm = LCMModel(config)
 o = lcm.generate("hello", num_generated_concepts=2)
 ```
 # Messages
-If you like this repoo you can <b>put a star</>.
-And if you want to understand the implementation I created an article:
+If you like this repo you can <b>put a star</b>.
+And if you want to understand the implementation I created an article:\n
 -> link
 
 # Citation
